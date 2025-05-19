@@ -16,12 +16,15 @@ body{
   flex-wrap: wrap; 
   align-items:center;
   justify-content: center;
+  flex-direction: column;
+
 
   padding-top:15px;
 
   font-family: Lato,sans-serif;
+  
   /*borrar*/
-  background-color: aqua;
+ /* background-color: aqua;*/
 }
 
 .freecodecamp-logo-contenedor{
@@ -31,13 +34,27 @@ body{
   justify-content:center;
   margin:20px;
 /*borrar*/
-  background-color: rgb(238, 255, 0);
-  padding: 50px;
+ /* background-color: rgb(238, 255, 0);
+  padding: 50px;*/
 }
 
 .freecodecamp-logo{
   height:50px;
 
   /*borrar*/
-  background-color: blueviolet;
+ /* background-color: blueviolet;*/
+}
+
+.contenedor-principal{
+  height:550px;
+  min-width:600px;
+  
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  flex-direction: column;
+
+
+  /*background-color:purple;*/
 }

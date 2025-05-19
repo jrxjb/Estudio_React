@@ -1,37 +1,50 @@
 import './App.css';
-import Boton from './componentes/Boton.jsx';
+import Boton from './componentes/Boton';
+import Contador from './componentes/Contador.jsx';
 import freeCodeCampLogo from './imagenes/freecodecamp-logo.png';
+import { useState } from 'react';
+
+
+
 
 function App() {
 
+  const [numClicsV, SetNumClics] = useState(0);
+
   const manejarClic = () => {
-    console.log("Clic")
+    SetNumClics(numClicsV+1);
   }
    const reiniciarContador =() =>{
-    console.log('Reiniciar')
+    SetNumClics(0);
    }
+
+
 
   return (
     <div className='App'>
-      <div classNmae='freecodecamp-logo-contenedor' >
-        <img
-          className='freecodecamp-logo'
-          src={freeCodeCampLogo}
-          alt='Logo de freeCodeCamp'
+        <div className='freecodecamp-logo-contenedor' >
+          <img
+            className='freecodecamp-logo'
+            src={freeCodeCampLogo}
+            alt='Logo de freeCodeCamp'
+          />
+        </div>
+
+        <div className='contenedor-principal'>
+        <Contador 
+        numClics={numClicsV}
         />
-      </div>
-      <div className='contenedor-principal'>
-       <Boton 
-        texto='Clic'
-        esbotonDeClic={true}
-        manejarClic={manejarClic}
+        <Boton 
+          texto='Clic'
+          esBotonDeClic={true}
+          manejarClic={manejarClic}
+          />
+        <Boton
+          texto='Reiniciar'
+          esBotonDeClic={false}
+          manejarClic={reiniciarContador}
         />
-       <Boton
-        texto='Reiniciar'
-        esbotonDeClic={false}
-        manejarClic={reiniciarContador}
-       />
-      </div>
+        </div>
 
     </div>
   );
