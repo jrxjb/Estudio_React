@@ -32,7 +32,7 @@ function App() {
 
         <div className='contenedor-principal'>
         <Contador 
-        numClics={numClicsV}
+        numClics={numClicsV} /**/
         />
         <Boton 
           texto='Clic'
