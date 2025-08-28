@@ -1,14 +1,14 @@
-import freeCodeCampLogo from './imagenes/FCC-logo.png'
 import './App.css';
+import freeCodeCampLogo from './imagenes/FCC_LOGO.png';
 
 function App() {
   return (
     <div className="aplicacion-tareas">
-      <div className='freecodecamp-logo-contenedor'>
+      <div className="freecodecamp-logo-contenedor">
         <img 
           src={freeCodeCampLogo} 
-          classname='freecodecamp-logo' />
-
+          className="freecodecamp-logo" 
+        />
       </div>
     </div>
   );

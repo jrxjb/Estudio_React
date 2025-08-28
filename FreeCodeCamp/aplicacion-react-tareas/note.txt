@@ -1,4 +1,0 @@
-Se podrian borrar los siguientes archivos
--En src/setupTests.js
--src/reportWebVitals.js
-App.test.js
