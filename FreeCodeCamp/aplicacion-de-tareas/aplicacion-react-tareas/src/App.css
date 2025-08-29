@@ -15,4 +15,39 @@ body {
 .aplicacion-tareas {
   display: flex;
   flex-wrap: wrap;
+  justify-content:center;
+  text-align:center;
+}
+/* Logo Free Code Camp */
+.freecodecamp-logo-contenedor {
+  width: 100%;
+  margin: 20px;
+  display:flex;
+  justify-content:center;
+  text-align:center;
+}
+
+.freecodecamp-logo {
+  width: 400px;
+  height:50px;
+}
+
+/* Lista de tareas */
+
+.tarea-lista-logo {
+width:600px;
+min-height:500px;
+background-color:#d0d0d5;
+padding:25px;
+margin:10px;
+justify-content:center;
+border-radius:26px;
+}
+
+h1{
+  color:#1b1b32;
+  font-size:35px;
+  font-family:'Roboto',sans-serif;
+  text-align:center;
+  margin: 20px 0px;
 }
