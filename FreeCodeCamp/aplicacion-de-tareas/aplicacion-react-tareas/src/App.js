@@ -3,7 +3,11 @@ import freeCodeCampLogo from './imagenes/FCC_LOGO.png';
 import Tarea from './componentes/tarea.js';
 import TareaFormulario from './componentes/TareaFormulario.js';
 import ListaDeTareas from './componentes/ListaDeTareas.js';
+// SOLO POR PRUEBA 
+import { useState } from 'react';
+
 function App() {
+  const [count, setCount] = useState(0);
   return (
     <div className="aplicacion-tareas">
       <div className="freecodecamp-logo-contenedor">
@@ -15,7 +19,17 @@ function App() {
       <div className='tarea-lista-logo'>
         <h1>Mis tareas</h1>
           <ListaDeTareas/>
+          <h1> Count: {count}</h1>
+          <button onClick ={() => setCount(count + 1)} > 
+            Incrementar
+          </button>
+          <button onClick={() => setCount(count - 1)} >
+            Decrementar
+          </button>
       </div>
+
+
+
 
     </div>
   );
