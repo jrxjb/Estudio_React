@@ -3,18 +3,20 @@ import TareaFormulario from './TareaFormulario';
 import '../hojas-de-estilo/ListaDeTareas.css';
 import Tarea from './tarea';
 
-
+//tarea.texto.trim() para saber que no esta vacia, quita los espacios del principio y final 
 
 function ListaDeTareas() {
   
   const[tareas,setTareas] = useState([]);
   const agregarTarea = tarea => {
-    console.log('Tarea Agregada')
-    console.log(tarea)
+    if (tarea.texto.trim()){
+      tarea.texto=tarea.texto.trim();
+
+    }
   }
   return (
       <>
-        <TareaFormulario/>
+        <TareaFormulario onSubmit={agregarTarea}/>
         <div className='tareas-lista-contendor'>
           LISTA DE TAREAS
           {
