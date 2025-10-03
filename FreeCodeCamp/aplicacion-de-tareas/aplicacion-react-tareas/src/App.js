@@ -19,13 +19,7 @@ function App() {
       <div className='tarea-lista-logo'>
         <h1>Mis tareas</h1>
           <ListaDeTareas/>
-          <h1> Count: {count}</h1>
-          <button onClick ={() => setCount(count + 1)} > 
-            Incrementar
-          </button>
-          <button onClick={() => setCount(count - 1)} >
-            Decrementar
-          </button>
+
       </div>
 
 
