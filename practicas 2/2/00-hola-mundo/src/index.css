@@ -43,12 +43,19 @@ article header span{
   margin-left:0px;
 }
 
-article button{
+.button-class{
   margin-left:16px;
   border:0px;
   border-radius:999px;
   padding:6px 16px;
   font-weight:bold;
+  cursor:pointer;
+  transition:  background-color .7s  ease ;
+}
+
+.button-class:hover {
+background-color:#adaeebf1;
+
 }
 
 .app-style{

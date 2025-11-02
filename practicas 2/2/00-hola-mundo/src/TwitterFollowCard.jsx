@@ -1,13 +1,13 @@
 import imageJB from '../src/imagenes/JB.png'
+import React from 'react'
+import {useState} from 'react'
 
-export function TwitterFollowCard ({children,formatUserName,userName, name, isFollowing, isLocal,inLocalDirection}) {
-    const localDirection=inLocalDirection
-    let imageSrc=""
-if(isLocal){
-    imageSrc=localDirection; 
-}else{
-    imageSrc= `https://unavatar.io/x/${userName}`;
-}
+export function TwitterFollowCard ({children,formatUserName,userName, name, isLocal,inLocalDirection}) {
+    const imageSrc = isLocal ? inLocalDirection:`https://unavatar.io/x/${userName}`;
+    const [isFollowing,setIsFollowing]=useState(false);
+    const handleClick = ()=> {
+        setIsFollowing(!isFollowing)
+    }
     return (
         <article>
             <header >
@@ -22,8 +22,8 @@ if(isLocal){
             </aside>
             </header>
             <aside>
-                <button>
-                    seguir
+                <button className='button-class' onClick={handleClick}>
+                    {isFollowing ? 'Siguiendo':'Seguir'}
                 </button>
             </aside>
         </article>

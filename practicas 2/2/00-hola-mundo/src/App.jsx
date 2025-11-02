@@ -10,7 +10,6 @@ export function App () {
         formatUserName={formatUser}
          userName="grok" 
          name="Grok" 
-         isFollowing={true}  
          isLocal={false}
          />
         <TwitterFollowCard
