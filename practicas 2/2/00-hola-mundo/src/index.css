@@ -43,21 +43,6 @@ article header span{
   margin-left:0px;
 }
 
-.button-class{
-  margin-left:16px;
-  border:0px;
-  border-radius:999px;
-  padding:6px 16px;
-  font-weight:bold;
-  cursor:pointer;
-  transition:  background-color .7s  ease ;
-}
-
-.button-class:hover {
-background-color:#adaeebf1;
-
-}
-
 .app-style{
   display:flex;
   flex-direction:column;
@@ -71,3 +56,57 @@ background-color:#adaeebf1;
   font-size:0.3em;
   opacity:0.3;
 }
+.tw-followCard-textFollowing{
+display:inline;
+width: 130px;
+}
+
+.button-class{
+  display:flex;
+  margin-left:16px;
+  border:0px;
+  border-radius:999px;
+  padding:6px 16px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:  background-color .7s  ease ;
+  align-items:center;
+  justify-content:center;
+}
+
+.button-class:hover {
+background-color:#adaeebf1;
+
+}
+.button-class.isFollowing{
+  background-color:transparent;
+  border:1px solid #bbb;
+  width:140px;
+  color:#fff
+  
+}
+
+.button-class.isFollowing:hover{
+  background-color:#dd8686;
+  border:1px solid #d44d4d;
+  width:140px;
+  
+}
+.tw-followCard-stopFollow{
+  display:none;
+  width: 140px;
+
+}
+
+
+.button-class.isFollowing:hover .tw-followCard-stopFollow{
+  display:block;
+  width: 140px;
+}
+
+
+.button-class.isFollowing:hover .tw-followCard-textFollowing {
+  display:none;
+  width: 140px;
+}
+

@@ -22,8 +22,14 @@ export function TwitterFollowCard ({children,formatUserName,userName, name, isLo
             </aside>
             </header>
             <aside>
-                <button className='button-class' onClick={handleClick}>
-                    {isFollowing ? 'Siguiendo':'Seguir'}
+                <button className={`button-class ${isFollowing? 'isFollowing':''}`} onClick={handleClick}>
+                    {isFollowing ?
+                    <>
+                    <span className='tw-followCard-stopFollow'> Dejar de seguir</span>
+                    <span className='tw-followCard-textFollowing'>Siguiendo</span>
+                    </>
+                    : 'seguir'
+                    }
                 </button>
             </aside>
         </article>
